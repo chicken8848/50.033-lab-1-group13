@@ -28,6 +28,7 @@ public class EnemyMovement : MonoBehaviour
     void Movegoomba()
     {
         enemyBody.MovePosition(enemyBody.position + velocity * Time.fixedDeltaTime);
+        enemyBody.MoveRotation(enemyBody.rotation + 300 * Time.fixedDeltaTime * -1 * moveRight);
     }
 
     // note that this is Update(), which still works but not ideal. See below.
